@@ -1,0 +1,5 @@
+{
+  "buildCommand": "bun run build && bun run vercel:post",
+  "outputDirectory": ".vercel/output",
+  "framework": null
+}
