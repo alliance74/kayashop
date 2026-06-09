@@ -19,10 +19,18 @@ rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 
 // 1. Copy static assets → .vercel/output/static/
-//    dist/client/assets/* becomes accessible at /assets/*
+//    dist/* becomes accessible at /*
 const staticDir = join(out, "static");
 mkdirSync(staticDir, { recursive: true });
-cpSync(join(root, "dist", "client"), staticDir, { recursive: true });
+
+// Check if dist directory exists
+const distDir = join(root, "dist");
+if (existsSync(distDir)) {
+  cpSync(distDir, staticDir, { recursive: true });
+} else {
+  console.error("Error: dist/ directory not found. Build may have failed.");
+  process.exit(1);
+}
 
 // 1b. Copy public/ folder → .vercel/output/static/ (favicon, etc.)
 const publicDir = join(root, "public");
@@ -30,40 +38,18 @@ if (existsSync(publicDir)) {
   cpSync(publicDir, staticDir, { recursive: true });
 }
 
-// 2. Copy serverless function into [[catchall]].func
-//    This name tells Vercel the function handles all paths
-const funcDir = join(out, "functions", "[[catchall]].func");
-mkdirSync(funcDir, { recursive: true });
-cpSync(join(root, "dist", "server"), funcDir, { recursive: true });
-
-// 3. Write .vc-config.json for the function
-writeFileSync(
-  join(funcDir, ".vc-config.json"),
-  JSON.stringify({
-    handler: "index.mjs",
-    runtime: "nodejs20.x",
-    launcherType: "Nodejs",
-    shouldAddHelpers: false,
-    supportsResponseStreaming: true,
-  }, null, 2)
-);
-
-// 4. Write top-level config.json
-//    Phase 1: { handle: "filesystem" } → Vercel checks static/ first
-//    Phase 2: any path not matched by a static file falls through to the SSR function
+// 2. Write top-level config.json for static site
+//    All routes are handled by static files
 writeFileSync(
   join(out, "config.json"),
   JSON.stringify({
     version: 3,
     routes: [
-      // Serve static files (assets/, images, etc.) directly from CDN
+      // Serve static files directly from CDN
       { handle: "filesystem" },
-      // Everything else goes to the SSR function
-      { src: "/(.*)", dest: "/[[catchall]]" },
     ],
   }, null, 2)
 );
 
 console.log("✓ Vercel Build Output API structure created at .vercel/output/");
 console.log("  static/  →", join(out, "static"));
-console.log("  function →", join(out, "functions", "[[catchall]].func"));
