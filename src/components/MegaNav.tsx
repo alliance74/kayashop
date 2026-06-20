@@ -1,16 +1,17 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Search, Menu, X, ChevronDown, Shirt, ShoppingBag, Users, Watch, Glasses } from "lucide-react";
+import { Search, Menu, X, ChevronDown, ShoppingBag } from "lucide-react";
 import { Logo } from "./Logo";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { useCart } from "@/lib/cart";
 
 const CATEGORIES = [
-  { name: "Shoes", icon: ShoppingBag },
-  { name: "Tops", icon: Shirt },
-  { name: "Pants", icon: Users },
-  { name: "Accessories", icon: Glasses },
-  { name: "Watches", icon: Watch },
-  { name: "Casual Shirts", icon: Shirt },
+  "Shoes",
+  "Tops", 
+  "Pants",
+  "Accessories",
+  "Watches",
+  "Casual Shirts"
 ];
 
 const ANNOUNCEMENTS = [
@@ -18,7 +19,7 @@ const ANNOUNCEMENTS = [
   "Free Worldwide Shipping on all orders over $200 with full tracking",
   "New Summer 2026 Collection is now live - Shop the latest arrivals",
   "Premium Quality Guaranteed: Italian craftsmanship meets modern design",
-  "Flash Sale: Save up to 30% off on selected premium menswear items",
+  "Flash Sale: Save up to 30% off on selected premium fashion items",
   "VIP Members get early access to new arrivals and exclusive collections",
 ];
 
@@ -29,6 +30,7 @@ export function MegaNav() {
   const [productsOpen, setProductsOpen] = useState(false);
   const [currentAnnouncementIndex, setCurrentAnnouncementIndex] = useState(0);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { count, openCart } = useCart();
 
   // Close on navigation
   useEffect(() => { setMobileOpen(false); setProductsOpen(false); }, [path]);
@@ -100,10 +102,8 @@ export function MegaNav() {
         }
       >
         <div className="flex w-full items-center gap-6 px-6 h-20 xl:px-10">
-          <Logo />
-
-          <nav className="mx-auto hidden items-center gap-1 lg:flex">
-            <NavLink to="/" active={path === "/"} scrolled={scrolled}>Home</NavLink>
+          {/* Left Nav */}
+          <nav className="hidden items-center gap-1 lg:flex flex-1">
             <DropdownTrigger
               label="Products"
               open={productsOpen}
@@ -116,11 +116,28 @@ export function MegaNav() {
             <NavLink to="/about" active={path.startsWith("/about")} scrolled={scrolled}>About</NavLink>
           </nav>
 
-          <div className="flex items-center gap-2">
+          {/* Center Logo */}
+          <Logo />
+
+          {/* Right Actions */}
+          <div className="flex items-center gap-2 flex-1 justify-end">
             <Link to="/products" className="hidden h-10 w-10 items-center justify-center rounded-full border border-line hover:bg-surface md:flex" aria-label="Search">
               <Search className="h-4 w-4" />
             </Link>
             <ThemeSwitcher />
+            <button 
+              onClick={openCart}
+              className="relative flex h-10 items-center gap-2 rounded-full border border-line px-4 hover:bg-surface transition-colors"
+              aria-label="Open cart"
+            >
+              <ShoppingBag className="h-4 w-4" />
+              <span className="hidden sm:inline text-sm">Cart</span>
+              {count > 0 && (
+                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-terracotta px-1.5 text-[11px] font-semibold text-white">
+                  {count}
+                </span>
+              )}
+            </button>
             <button onClick={() => setMobileOpen((v) => !v)} className="flex h-10 w-10 items-center justify-center rounded-full border border-line lg:hidden" aria-label="Menu">
               {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>
@@ -132,27 +149,64 @@ export function MegaNav() {
           <div
             onMouseEnter={cancelClose}
             onMouseLeave={scheduleClose}
-            className="absolute inset-x-0 z-40 border-b border-line bg-background shadow-warm animate-in fade-in slide-in-from-top-2 duration-150"
+            className="fixed left-0 top-[80px] z-40 h-[calc(100vh-80px)] border-r border-line bg-background shadow-warm animate-in fade-in slide-in-from-left-2 duration-150 overflow-y-auto"
+            style={{ width: "280px" }}
           >
-            <div className="w-full px-6 py-6 xl:px-10">
-              <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-                {CATEGORIES.map(({ name, icon: Icon }) => (
+            <div className="flex flex-col h-full">
+              {/* Category Links */}
+              <div className="py-6">
+                {CATEGORIES.map((category) => (
                   <Link
-                    key={name}
+                    key={category}
                     to="/products"
-                    search={{ category: name }}
-                    className="group flex items-center gap-3 rounded-xl p-3 transition-colors hover:bg-surface"
+                    search={{ category }}
+                    className="block px-6 py-3 text-base text-ink hover:bg-surface hover:text-terracotta transition-colors font-medium"
                   >
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-peach-soft/70 text-terracotta transition-colors group-hover:bg-terracotta group-hover:text-white">
-                      <Icon className="h-4 w-4" />
-                    </span>
-                    <div className="text-sm font-medium text-ink">{name}</div>
+                    {category}
                   </Link>
                 ))}
+                <div className="mt-2 border-t border-line pt-2">
+                  <Link 
+                    to="/products" 
+                    className="block px-6 py-3 text-base font-medium text-terracotta hover:bg-surface transition-colors"
+                  >
+                    View all products →
+                  </Link>
+                </div>
               </div>
-              <div className="mt-4 flex items-center justify-between border-t border-line pt-4">
-                <span className="text-sm text-muted-foreground">6 categories · curated collections for every style.</span>
-                <Link to="/products" className="btn-primary text-sm">View all products →</Link>
+
+              {/* Product Images Grid */}
+              <div className="mt-auto border-t border-line p-4">
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="aspect-square overflow-hidden rounded-lg bg-surface">
+                    <img 
+                      src="/coursel/shoes.png" 
+                      alt="Shoes" 
+                      className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="aspect-square overflow-hidden rounded-lg bg-surface">
+                    <img 
+                      src="/coursel/clothes.png" 
+                      alt="Clothes" 
+                      className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="aspect-square overflow-hidden rounded-lg bg-surface">
+                    <img 
+                      src="/coursel/pants.jpg" 
+                      alt="Pants" 
+                      className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="aspect-square overflow-hidden rounded-lg bg-surface">
+                    <img 
+                      src="/coursel/watch.jpg" 
+                      alt="Watch" 
+                      className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -162,17 +216,16 @@ export function MegaNav() {
         {mobileOpen && (
           <div className="border-t border-line bg-surface lg:hidden">
             <div className="w-full space-y-1 px-6 py-4 xl:px-10">
-              <MobileLink to="/">Home</MobileLink>
               <MobileLink to="/products">All Products</MobileLink>
               <div className="ml-3 mt-1 space-y-1">
-                {CATEGORIES.map(({ name }) => (
+                {CATEGORIES.map((category) => (
                   <Link
-                    key={name}
+                    key={category}
                     to="/products"
-                    search={{ category: name }}
+                    search={{ category }}
                     className="block rounded-md px-2 py-1.5 text-[13px] text-muted-foreground hover:bg-surface-alt"
                   >
-                    {name}
+                    {category}
                   </Link>
                 ))}
               </div>
