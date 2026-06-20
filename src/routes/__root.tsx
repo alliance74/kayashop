@@ -12,9 +12,10 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AuthProvider } from "../lib/auth";
-import { CartProvider } from "../lib/cart";
+import { CartProvider, useCart } from "../lib/cart";
 import { MegaNav } from "../components/MegaNav";
 import { Footer } from "../components/Footer";
+import { CartSidebar } from "../components/CartSidebar";
 import { useInitTheme } from "../components/ThemeSwitcher";
 import { Toaster } from "sonner";
 
@@ -70,9 +71,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Aperion — Curated clothing for refined taste" },
-      { name: "description", content: "Aperion offers premium menswear from Italian leather to Japanese denim. Shop curated collections of shoes, tops, pants, accessories and watches." },
+      { name: "description", content: "Aperion offers premium fashion from Italian leather to Japanese denim. Shop curated collections of shoes, tops, pants, accessories and watches." },
       { property: "og:title", content: "Aperion — Curated clothing for refined taste" },
-      { property: "og:description", content: "Premium menswear, timeless design, understated luxury — every piece chosen for quality and craft." },
+      { property: "og:description", content: "Premium fashion, timeless design, understated luxury — every piece chosen for quality and craft." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Aperion — Curated clothing for refined taste" },
@@ -108,25 +109,35 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <CartProvider>
-          <div className="flex min-h-screen flex-col">
-            <MegaNav />
-            <main className="flex-1"><Outlet /></main>
-            <Footer />
-          </div>
-          <Toaster
-            position="top-center"
-            toastOptions={{
-              style: {
-                background: "var(--surface)",
-                color: "var(--foreground)",
-                border: "1px solid var(--line)",
-                borderRadius: "14px",
-              },
-            }}
-          />
+          <CartContent />
         </CartProvider>
       </AuthProvider>
     </QueryClientProvider>
+  );
+}
+
+function CartContent() {
+  const { isOpen, closeCart } = useCart();
+  return (
+    <>
+      <div className="flex min-h-screen flex-col">
+        <MegaNav />
+        <main className="flex-1"><Outlet /></main>
+        <Footer />
+      </div>
+      <CartSidebar isOpen={isOpen} onClose={closeCart} />
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          style: {
+            background: "var(--surface)",
+            color: "var(--foreground)",
+            border: "1px solid var(--line)",
+            borderRadius: "14px",
+          },
+        }}
+      />
+    </>
   );
 }
 
