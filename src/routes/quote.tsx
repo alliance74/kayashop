@@ -6,9 +6,9 @@ import { useCart } from "@/lib/cart";
 export const Route = createFileRoute("/quote")({
   head: () => ({
     meta: [
-      { title: "Request a Quote — Kaya" },
-      { name: "description", content: "Tell us about your hotel project — Kaya responds with a tailored quote within 48 hours." },
-      { property: "og:title", content: "Request a Quote — Kaya" },
+      { title: "Request a Quote — Aperion" },
+      { name: "description", content: "Tell us about your hotel project — Aperion responds with a tailored quote within 48 hours." },
+      { property: "og:title", content: "Request a Quote — Aperion" },
       { property: "og:description", content: "Tailored hospitality supply quotes within 48 hours." },
     ],
   }),

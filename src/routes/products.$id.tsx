@@ -9,7 +9,7 @@ import { useCart } from "@/lib/cart";
 export const Route = createFileRoute("/products/$id")({
   head: ({ params }) => ({
     meta: [
-      { title: `Product ${params.id} — Kaya` },
+      { title: `Product ${params.id} — Aperion` },
     ],
   }),
   component: ProductDetail,

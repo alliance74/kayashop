@@ -4,9 +4,9 @@ import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Atelier" },
-      { name: "description", content: "Get in touch with Atelier — we're here to help with styling questions, orders, and product inquiries." },
-      { property: "og:title", content: "Contact — Atelier" },
+      { title: "Contact — Aperion" },
+      { name: "description", content: "Get in touch with Aperion — we're here to help with styling questions, orders, and product inquiries." },
+      { property: "og:title", content: "Contact — Aperion" },
       { property: "og:description", content: "Reach our styling team for personalized assistance." },
     ],
   }),
@@ -34,11 +34,11 @@ function Contact() {
           <div className="surface-card p-8">
             <h2 className="mb-6 font-display text-2xl">Contact information</h2>
             <div className="space-y-5 text-sm">
-              <a href="mailto:hello@atelier.com" className="flex items-start gap-4 text-ink transition-colors hover:text-terracotta">
+              <a href="mailto:hello@aperion.com" className="flex items-start gap-4 text-ink transition-colors hover:text-terracotta">
                 <Mail className="mt-0.5 h-5 w-5 shrink-0 text-terracotta" />
                 <div>
                   <div className="font-medium text-base">Email us</div>
-                  <div className="mt-1 text-muted-foreground">hello@atelier.com</div>
+                  <div className="mt-1 text-muted-foreground">hello@aperion.com</div>
                   <div className="mt-1 text-xs text-muted-foreground">We respond within 24 hours</div>
                 </div>
               </a>

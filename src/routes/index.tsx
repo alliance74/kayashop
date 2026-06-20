@@ -2,14 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, Truck, ShieldCheck, Hammer, Headset, Award, Globe2 } from "lucide-react";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { CategoryMarquee } from "@/components/CategoryMarquee";
+import { ProductCard } from "@/components/ProductCard";
 import { featuredCategories, industries, projects, seedProducts } from "@/data/catalog";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Atelier — Curated menswear for refined taste" },
-      { name: "description", content: "Atelier offers premium menswear — Italian leather sneakers, luxury watches, fine linens and tailored pieces. Curated for style and quality." },
-      { property: "og:title", content: "Atelier — Curated menswear for refined taste" },
+      { title: "Aperion — Curated menswear for refined taste" },
+      { name: "description", content: "Aperion offers premium menswear — Italian leather sneakers, luxury watches, fine linens and tailored pieces. Curated for style and quality." },
+      { property: "og:title", content: "Aperion — Curated menswear for refined taste" },
       { property: "og:description", content: "Premium menswear, timeless design, understated luxury — every piece chosen for quality and craft." },
     ],
   }),
@@ -108,20 +109,9 @@ function Home() {
           </div>
           <Link to="/products" className="text-sm text-terracotta hover:underline">View all →</Link>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p) => (
-            <Link key={p.id} to="/product/$id" params={{ id: p.id }} className="surface-card group overflow-hidden transition-transform hover:-translate-y-1">
-              <div className="relative aspect-[4/5] overflow-hidden bg-peach-soft/60">
-                <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <span className="absolute left-3 top-3 rounded-full bg-foreground/85 px-3 py-1 text-[11px] uppercase tracking-wider text-background">
-                  {p.category}
-                </span>
-              </div>
-              <div className="space-y-1 p-5">
-                <h3 className="font-display text-lg leading-tight">{p.name}</h3>
-                <p className="line-clamp-2 text-sm text-muted-foreground">{p.description}</p>
-              </div>
-            </Link>
+            <ProductCard key={p.id} product={p} />
           ))}
         </div>
       </section>
@@ -133,7 +123,7 @@ function Home() {
             <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Style philosophy</div>
             <h2 className="mt-2 font-display text-4xl md:text-5xl">Dress for how you live</h2>
             <p className="mt-4 text-muted-foreground">
-              From streetwear to formal occasions — Atelier curates pieces that adapt to your lifestyle,
+              From streetwear to formal occasions — Aperion curates pieces that adapt to your lifestyle,
               not the other way around.
             </p>
             <Link to="/industries" className="mt-6 inline-flex btn-primary text-sm">Explore styles →</Link>

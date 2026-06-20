@@ -6,8 +6,8 @@ import { categories } from "@/data/catalog";
 export function CategoryMarquee({ reverse = false }: { reverse?: boolean }) {
   const list = [...categories, ...categories]; // duplicate for seamless loop
   return (
-    <div className="kaya-marquee group relative overflow-hidden">
-      <div className={"kaya-marquee-track flex gap-5 " + (reverse ? "kaya-marquee-reverse" : "")}>
+    <div className="aperion-marquee group relative overflow-hidden">
+      <div className={"aperion-marquee-track flex gap-5 " + (reverse ? "aperion-marquee-reverse" : "")}>
         {list.map((c, i) => (
           <Link
             key={c.slug + "-" + i}

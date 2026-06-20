@@ -4,7 +4,7 @@ import { useCart } from "@/lib/cart";
 import { formatUSD, priceForQty } from "@/lib/api";
 
 export const Route = createFileRoute("/cart")({
-  head: () => ({ meta: [{ title: "Cart — Kaya" }] }),
+  head: () => ({ meta: [{ title: "Cart — Aperion" }] }),
   component: CartPage,
 });
 

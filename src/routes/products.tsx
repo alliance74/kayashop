@@ -6,9 +6,9 @@ import { categories, seedProducts } from "@/data/catalog";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "All Products — Atelier" },
+      { title: "All Products — Aperion" },
       { name: "description", content: "Explore our curated collection of premium menswear — shoes, tops, pants, accessories, watches and more." },
-      { property: "og:title", content: "All Products — Atelier" },
+      { property: "og:title", content: "All Products — Aperion" },
       { property: "og:description", content: "Curated premium menswear from the world's finest brands." },
     ],
   }),

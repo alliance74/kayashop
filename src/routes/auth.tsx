@@ -7,7 +7,7 @@ export const Route = createFileRoute("/auth")({
   validateSearch: (s: Record<string, unknown>) => ({
     redirect: typeof s.redirect === "string" ? s.redirect : "/",
   }),
-  head: () => ({ meta: [{ title: "Sign in — Kaya" }] }),
+  head: () => ({ meta: [{ title: "Sign in — Aperion" }] }),
   component: AuthPage,
 });
 
@@ -46,7 +46,7 @@ function AuthPage() {
       <div className="grid w-full max-w-5xl overflow-hidden rounded-[28px] border border-line bg-surface shadow-warm md:grid-cols-2">
         <div className="hidden flex-col justify-between bg-foreground p-12 text-background md:flex">
           <div className="flex items-center gap-2 font-display text-2xl">
-            <span className="text-terracotta">◆</span> Kaya
+            <span className="text-terracotta">◆</span> Aperion
           </div>
           <div>
             <h1 className="font-display text-5xl italic leading-tight">

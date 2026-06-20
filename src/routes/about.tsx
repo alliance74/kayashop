@@ -4,8 +4,8 @@ import { Building2, Globe2, Handshake, Award, Truck, Wrench } from "lucide-react
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Atelier" },
-      { name: "description", content: "Atelier is a curated menswear brand celebrating quality, craft and timeless design. From Italian leather to Japanese denim — every piece tells a story." },
+      { title: "About — Aperion" },
+      { name: "description", content: "Aperion is a curated menswear brand celebrating quality, craft and timeless design. From Italian leather to Japanese denim — every piece tells a story." },
     ],
   }),
   component: About,
@@ -26,13 +26,13 @@ function About() {
 
       {/* Hero */}
       <div className="max-w-4xl">
-        <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">About Atelier</div>
+        <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">About Aperion</div>
         <h1 className="mt-3 font-display text-5xl leading-[1.05] md:text-7xl">
           Where quality meets<br />
           <span className="italic text-terracotta">timeless design.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Atelier is a curated menswear brand built on the belief that great clothing should be
+          Aperion is a curated menswear brand built on the belief that great clothing should be
           timeless, not trendy. We source premium pieces from the world's finest makers — Italian
           leather sneakers, Japanese selvedge denim, Swiss timepieces and refined accessories.
         </p>

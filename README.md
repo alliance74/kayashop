@@ -1,4 +1,4 @@
-# 🛍️ Kaya Shop - Luxury Menswear E-Commerce
+# 🛍️ Aperion Shop - Luxury Menswear E-Commerce
 
 A sophisticated, black & white themed luxury menswear e-commerce platform built with modern web technologies.
 
@@ -45,8 +45,8 @@ A sophisticated, black & white themed luxury menswear e-commerce platform built 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/alliance74/kayashop.git
-cd kayashop
+git clone https://github.com/alliance74/aperion.git
+cd aperion
 ```
 
 2. **Install dependencies**
@@ -80,7 +80,7 @@ The build output will be in the `dist` directory.
 
 ### Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/alliance74/kayashop)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/alliance74/aperion)
 
 1. Push your code to GitHub
 2. Import your repository in Vercel
@@ -92,7 +92,7 @@ The project includes a `vercel.json` configuration file optimized for deployment
 ## 📂 Project Structure
 
 ```
-kayashop/
+aperion/
 ├── coursel/              # Hero carousel images
 ├── accessories/          # Accessories product images
 ├── src/
@@ -157,7 +157,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-Project Link: [https://github.com/alliance74/kayashop](https://github.com/alliance74/kayashop)
+Project Link: [https://github.com/alliance74/aperion](https://github.com/alliance74/aperion)
 
 ## 🙏 Acknowledgments
 

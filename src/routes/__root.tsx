@@ -69,13 +69,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Atelier — Curated clothing for refined taste" },
-      { name: "description", content: "Atelier offers premium menswear from Italian leather to Japanese denim. Shop curated collections of shoes, tops, pants, accessories and watches." },
-      { property: "og:title", content: "Atelier — Curated clothing for refined taste" },
+      { title: "Aperion — Curated clothing for refined taste" },
+      { name: "description", content: "Aperion offers premium menswear from Italian leather to Japanese denim. Shop curated collections of shoes, tops, pants, accessories and watches." },
+      { property: "og:title", content: "Aperion — Curated clothing for refined taste" },
       { property: "og:description", content: "Premium menswear, timeless design, understated luxury — every piece chosen for quality and craft." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Atelier — Curated clothing for refined taste" },
+      { name: "twitter:title", content: "Aperion — Curated clothing for refined taste" },
       { name: "twitter:description", content: "Premium menswear, timeless design, understated luxury — every piece chosen for quality and craft." },
     ],
     links: [
