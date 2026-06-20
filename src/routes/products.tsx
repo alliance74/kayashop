@@ -6,10 +6,10 @@ import { categories, seedProducts } from "@/data/catalog";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "All Products — Atelier" },
-      { name: "description", content: "Explore our curated collection of premium menswear — shoes, tops, pants, accessories, watches and more." },
-      { property: "og:title", content: "All Products — Atelier" },
-      { property: "og:description", content: "Curated premium menswear from the world's finest brands." },
+      { title: "All Products — Aperion" },
+      { name: "description", content: "Explore our curated collection of premium fashion — shoes, tops, pants, accessories, watches and more." },
+      { property: "og:title", content: "All Products — Aperion" },
+      { property: "og:description", content: "Curated premium fashion from the world's finest brands." },
     ],
   }),
   validateSearch: (search: Record<string, unknown>): { category?: string } => {
@@ -75,10 +75,10 @@ function Catalog() {
   return (
     <div className="w-full px-6 py-16 xl:px-10">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-        <div>
+        <div className="space-y-3">
           <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Collection</div>
-          <h1 className="mt-2 font-display text-5xl md:text-6xl">Curated menswear</h1>
-          <p className="mt-3 max-w-xl text-muted-foreground">
+          <h1 className="font-display text-5xl md:text-6xl leading-tight">Curated Fashion</h1>
+          <p className="max-w-xl text-muted-foreground leading-relaxed">
             Browse our premium collection by category or search for specific items.
           </p>
         </div>
@@ -192,7 +192,7 @@ function Catalog() {
       {/* Category Info Section */}
       <div className="mt-20 surface-card p-10">
         <div className="max-w-3xl">
-          <h2 className="font-display text-3xl">Premium menswear categories</h2>
+          <h2 className="font-display text-3xl">Premium fashion categories</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {PRODUCT_CATEGORIES.map((cat) => (
               <div key={cat} className="border-l-2 border-terracotta pl-4">

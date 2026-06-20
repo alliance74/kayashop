@@ -13,13 +13,13 @@ import {
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Atelier" },
+      { title: "Services — Aperion" },
       {
         name: "description",
         content:
-          "Atelier offers personal styling, expert alterations, virtual try-on, wardrobe building and VIP access — premium service for discerning clients.",
+          "Aperion offers personal styling, expert alterations, virtual try-on, wardrobe building and VIP access — premium service for discerning clients.",
       },
-      { property: "og:title", content: "Services — Atelier" },
+      { property: "og:title", content: "Services — Aperion" },
       {
         property: "og:description",
         content:
@@ -120,7 +120,7 @@ const services = [
 
 const process = [
   { n: "01", title: "Tell us about your project", body: "Fill in the quote form — room count, location, timeline and the categories you need. Takes under 5 minutes." },
-  { n: "02", title: "We send a tailored proposal", body: "Within 48 hours a member of the Kaya team responds with a full scope, product selection and indicative budget." },
+  { n: "02", title: "We send a tailored proposal", body: "Within 48 hours a member of the Aperion team responds with a full scope, product selection and indicative budget." },
   { n: "03", title: "Approve and we get to work", body: "Once you approve, we lock in production and logistics slots. A project manager tracks everything to handover." },
 ];
 
@@ -139,7 +139,7 @@ function ServicesPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
             From sourcing a single linen order to managing a full 200-room hotel
-            fit-out — Kaya handles supply, installation, design and maintenance
+            fit-out — Aperion handles supply, installation, design and maintenance
             so you have one contract, one contact, one timeline.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">

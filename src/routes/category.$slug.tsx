@@ -7,10 +7,10 @@ export const Route = createFileRoute("/category/$slug")({
     const c = categories.find((x) => x.slug === params.slug);
     return {
       meta: [
-        { title: c ? `${c.name} — Kaya` : "Category — Kaya" },
-        { name: "description", content: c?.blurb ?? "Hotel supply category by Kaya." },
-        { property: "og:title", content: c ? `${c.name} — Kaya` : "Category — Kaya" },
-        { property: "og:description", content: c?.blurb ?? "Hotel supply category by Kaya." },
+        { title: c ? `${c.name} — Aperion` : "Category — Aperion" },
+        { name: "description", content: c?.blurb ?? "Hotel supply category by Aperion." },
+        { property: "og:title", content: c ? `${c.name} — Aperion` : "Category — Aperion" },
+        { property: "og:description", content: c?.blurb ?? "Hotel supply category by Aperion." },
         ...(c ? [{ property: "og:image", content: c.cover }] : []),
       ],
     };

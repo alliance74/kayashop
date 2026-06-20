@@ -5,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Kaya / Provisto design tokens ──────────────────────────── */
+/* ─── Aperion / Provisto design tokens ──────────────────────────── */
 :root {
   /* surfaces - Black & White theme */
   --background: #ffffff;            /* pure white */
@@ -265,19 +265,19 @@
 }
 
 /* ─── Marquee (auto-scrolling category rows) ─────────────── */
-.kaya-marquee { mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent); }
-@keyframes kaya-marquee-x {
+.aperion-marquee { mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent); }
+@keyframes aperion-marquee-x {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.kaya-marquee-track {
+.aperion-marquee-track {
   width: max-content;
-  animation: kaya-marquee-x 120s linear infinite;
+  animation: aperion-marquee-x 120s linear infinite;
 }
-.kaya-marquee-track.kaya-marquee-reverse { animation-direction: reverse; }
-.kaya-marquee:hover .kaya-marquee-track { animation-play-state: paused; }
+.aperion-marquee-track.aperion-marquee-reverse { animation-direction: reverse; }
+.aperion-marquee:hover .aperion-marquee-track { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) {
-  .kaya-marquee-track { animation: none; }
+  .aperion-marquee-track { animation: none; }
 }
 
 

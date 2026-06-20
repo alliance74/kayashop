@@ -9,7 +9,7 @@ const THEMES = [
 ] as const;
 type ThemeId = (typeof THEMES)[number]["id"];
 
-const KEY = "kaya_theme";
+const KEY = "aperion_theme";
 
 export function applyTheme(id: ThemeId) {
   if (typeof document === "undefined") return;

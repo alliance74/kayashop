@@ -18,6 +18,9 @@ interface CartCtx {
   clear: () => void;
   count: number;
   subtotal: number;
+  isOpen: boolean;
+  openCart: () => void;
+  closeCart: () => void;
 }
 
 const Ctx = createContext<CartCtx | null>(null);
@@ -25,6 +28,7 @@ const KEY = "provisto_cart_v1";
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -63,6 +67,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const remove: CartCtx["remove"] = (productId) =>
     setItems((cur) => cur.filter((i) => i.productId !== productId));
   const clear = () => setItems([]);
+  
+  const openCart = () => setIsOpen(true);
+  const closeCart = () => setIsOpen(false);
 
   const { count, subtotal } = useMemo(() => {
     let c = 0, s = 0;
@@ -74,7 +81,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, [items]);
 
   return (
-    <Ctx.Provider value={{ items, add, setQty, remove, clear, count, subtotal }}>
+    <Ctx.Provider value={{ items, add, setQty, remove, clear, count, subtotal, isOpen, openCart, closeCart }}>
       {children}
     </Ctx.Provider>
   );

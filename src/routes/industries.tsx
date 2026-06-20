@@ -4,10 +4,10 @@ import { industries } from "@/data/catalog";
 export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
-      { title: "Industries — Kaya" },
-      { name: "description", content: "Kaya supplies hotels, resorts, serviced apartments, restaurants, hospitals, schools and offices worldwide." },
-      { property: "og:title", content: "Industries — Kaya" },
-      { property: "og:description", content: "Hotels, resorts, apartments, restaurants, hospitals, schools, offices — all outfitted by Kaya." },
+      { title: "Industries — Aperion" },
+      { name: "description", content: "Aperion supplies hotels, resorts, serviced apartments, restaurants, hospitals, schools and offices worldwide." },
+      { property: "og:title", content: "Industries — Aperion" },
+      { property: "og:description", content: "Hotels, resorts, apartments, restaurants, hospitals, schools, offices — all outfitted by Aperion." },
     ],
   }),
   component: () => (

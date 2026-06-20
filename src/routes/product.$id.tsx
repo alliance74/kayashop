@@ -7,10 +7,10 @@ export const Route = createFileRoute("/product/$id")({
     const p = productBySlug(params.id);
     return {
       meta: [
-        { title: p ? `${p.name} — Atelier` : "Product — Atelier" },
-        { name: "description", content: p?.description ?? "Premium menswear by Atelier." },
-        { property: "og:title", content: p ? `${p.name} — Atelier` : "Product — Atelier" },
-        { property: "og:description", content: p?.description ?? "Premium menswear by Atelier." },
+        { title: p ? `${p.name} — Aperion` : "Product — Aperion" },
+        { name: "description", content: p?.description ?? "Premium fashion by Aperion." },
+        { property: "og:title", content: p ? `${p.name} — Aperion` : "Product — Aperion" },
+        { property: "og:description", content: p?.description ?? "Premium fashion by Aperion." },
         ...(p ? [{ property: "og:image", content: p.image }] : []),
       ],
     };

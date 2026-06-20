@@ -4,9 +4,9 @@ import { projects } from "@/data/catalog";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — Kaya" },
-      { name: "description", content: "Hotels, resorts and apartment projects outfitted by Kaya across Georgia and beyond." },
-      { property: "og:title", content: "Projects — Kaya" },
+      { title: "Projects — Aperion" },
+      { name: "description", content: "Hotels, resorts and apartment projects outfitted by Aperion across Georgia and beyond." },
+      { property: "og:title", content: "Projects — Aperion" },
       { property: "og:description", content: "A selection of properties we've delivered — from boutique hotels to flagship resorts." },
     ],
   }),
