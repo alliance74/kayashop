@@ -14,16 +14,18 @@ export function ProductCard({ product }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
-  const { add } = useCart();
+  const { add, openCart } = useCart();
 
-  // For demo, we'll use the same image. In real app, you'd have product.images array
-  const mainImage = product.image || "/placeholder.png";
-  const hoverImage = product.image || "/placeholder.png"; // Would be product.images[1] in real app
+  // Use first image as main, second image (if exists) as hover
+  const images = (product as any).images || [product.image];
+  const mainImage = images[0] || product.image || "/placeholder.png";
+  const hoverImage = images[1] || mainImage; // Use second image if available, else same as main
 
   const handleAddToCart = (size: string) => {
     setSelectedSize(size);
     add(product, 1);
     toast.success(`Added ${product.name} (${size}) to cart`);
+    openCart();
   };
 
   const toggleFavorite = () => {
