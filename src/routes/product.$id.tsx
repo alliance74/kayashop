@@ -8,9 +8,9 @@ export const Route = createFileRoute("/product/$id")({
     return {
       meta: [
         { title: p ? `${p.name} — Aperion` : "Product — Aperion" },
-        { name: "description", content: p?.description ?? "Premium menswear by Aperion." },
+        { name: "description", content: p?.description ?? "Premium fashion by Aperion." },
         { property: "og:title", content: p ? `${p.name} — Aperion` : "Product — Aperion" },
-        { property: "og:description", content: p?.description ?? "Premium menswear by Aperion." },
+        { property: "og:description", content: p?.description ?? "Premium fashion by Aperion." },
         ...(p ? [{ property: "og:image", content: p.image }] : []),
       ],
     };

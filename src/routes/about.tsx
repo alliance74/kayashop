@@ -5,7 +5,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Aperion" },
-      { name: "description", content: "Aperion is a curated menswear brand celebrating quality, craft and timeless design. From Italian leather to Japanese denim — every piece tells a story." },
+      { name: "description", content: "Aperion is a curated fashion brand celebrating quality, craft and timeless design. From Italian leather to Japanese denim — every piece tells a story." },
     ],
   }),
   component: About,
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/about")({
 function About() {
   const values = [
     { icon: Building2, title: "Quality first", body: "Every piece is selected for craftsmanship, materials and construction — not trends that fade in a season. We curate brands that prioritize longevity over volume." },
-    { icon: Globe2, title: "Global curation", body: "From Italian ateliers to Japanese denim mills — we source the world's finest menswear and bring it to your doorstep with worldwide shipping." },
+    { icon: Globe2, title: "Global curation", body: "From Italian ateliers to Japanese denim mills — we source the world's finest fashion and bring it to your doorstep with worldwide shipping." },
     { icon: Handshake, title: "Personal service", body: "Work directly with our styling team for wardrobe consultations, fit guidance and personalized recommendations tailored to your lifestyle." },
     { icon: Award, title: "Authenticated pieces", body: "Every luxury item is verified for authenticity. We partner directly with authorized retailers and maintain strict quality standards." },
     { icon: Truck, title: "Reliable delivery", body: "Fast, tracked shipping worldwide with expert packaging to ensure your pieces arrive in perfect condition." },
@@ -32,7 +32,7 @@ function About() {
           <span className="italic text-terracotta">timeless design.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Aperion is a curated menswear brand built on the belief that great clothing should be
+          Aperion is a curated fashion brand built on the belief that great clothing should be
           timeless, not trendy. We source premium pieces from the world's finest makers — Italian
           leather sneakers, Japanese selvedge denim, Swiss timepieces and refined accessories.
         </p>
@@ -63,7 +63,7 @@ function About() {
         <h2 className="mt-2 font-display text-4xl md:text-5xl">From discovery to delivery</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
-            { n: "01", title: "Explore the collection", body: "Browse our curated selection of premium menswear — from Italian sneakers to Swiss watches, all chosen for quality and craft." },
+            { n: "01", title: "Explore the collection", body: "Browse our curated selection of premium fashion — from Italian sneakers to Swiss watches, all chosen for quality and craft." },
             { n: "02", title: "Personal styling (optional)", body: "Book a consultation with our styling team to build a personalized wardrobe tailored to your taste and lifestyle." },
             { n: "03", title: "Expert alterations & delivery", body: "We handle alterations for the perfect fit and ship worldwide with tracking. Your pieces arrive ready to wear." },
           ].map((s) => (

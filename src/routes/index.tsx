@@ -8,10 +8,10 @@ import { featuredCategories, industries, projects, seedProducts } from "@/data/c
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aperion — Curated menswear for refined taste" },
-      { name: "description", content: "Aperion offers premium menswear — Italian leather sneakers, luxury watches, fine linens and tailored pieces. Curated for style and quality." },
-      { property: "og:title", content: "Aperion — Curated menswear for refined taste" },
-      { property: "og:description", content: "Premium menswear, timeless design, understated luxury — every piece chosen for quality and craft." },
+      { title: "Aperion — Curated fashion for refined taste" },
+      { name: "description", content: "Aperion offers premium fashion — Italian leather sneakers, luxury watches, fine linens and tailored pieces. Curated for style and quality." },
+      { property: "og:title", content: "Aperion — Curated fashion for refined taste" },
+      { property: "og:description", content: "Premium fashion, timeless design, understated luxury — every piece chosen for quality and craft." },
     ],
   }),
   component: Home,
@@ -51,7 +51,7 @@ function Home() {
         <div className="w-full px-6 xl:px-10 mb-6 flex items-end justify-between gap-4">
           <div>
             <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Shop by category</div>
-            <h2 className="mt-2 font-display text-4xl md:text-5xl">Premium menswear essentials</h2>
+            <h2 className="mt-2 font-display text-4xl md:text-5xl">Premium fashion essentials</h2>
             <p className="mt-2 max-w-xl text-muted-foreground">
               From Italian leather footwear to Swiss timepieces — everything a modern wardrobe needs.
             </p>
