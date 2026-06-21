@@ -5,6 +5,12 @@ import { Logo } from "./Logo";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { useCart } from "@/lib/cart";
 
+// Import carousel images for dropdown
+import shoesImg from "../../coursel/shoes.png";
+import clothesImg from "../../coursel/clothes.png";
+import pantsImg from "../../coursel/pants.jpg";
+import watchImg from "../../coursel/watch.jpg";
+
 const CATEGORIES = [
   "Shoes",
   "Tops", 
@@ -180,28 +186,28 @@ export function MegaNav() {
                 <div className="grid grid-cols-2 gap-2">
                   <div className="aspect-square overflow-hidden rounded-lg bg-surface">
                     <img 
-                      src="/coursel/shoes.png" 
+                      src={shoesImg} 
                       alt="Shoes" 
                       className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="aspect-square overflow-hidden rounded-lg bg-surface">
                     <img 
-                      src="/coursel/clothes.png" 
+                      src={clothesImg} 
                       alt="Clothes" 
                       className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="aspect-square overflow-hidden rounded-lg bg-surface">
                     <img 
-                      src="/coursel/pants.jpg" 
+                      src={pantsImg} 
                       alt="Pants" 
                       className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="aspect-square overflow-hidden rounded-lg bg-surface">
                     <img 
-                      src="/coursel/watch.jpg" 
+                      src={watchImg} 
                       alt="Watch" 
                       className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
                     />
