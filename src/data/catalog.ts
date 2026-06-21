@@ -11,24 +11,80 @@ import accessoriesJpg from "../../accessories/accesories.jpg";
 
 // Real product images - Shoes
 import imgMargielaGats from "@/assets/shoes/Margiela Gats/Screenshot 2026-06-08 232003.png";
+import imgMargielaGats2 from "@/assets/shoes/Margiela Gats/Screenshot 2026-06-08 232013.png";
+import imgMargielaGats3 from "@/assets/shoes/Margiela Gats/Screenshot 2026-06-08 232022.png";
+import imgMargielaGats4 from "@/assets/shoes/Margiela Gats/Screenshot 2026-06-08 232037.png";
+import imgMargielaGats5 from "@/assets/shoes/Margiela Gats/Screenshot 2026-06-08 232058.png";
+
 import imgGoldenGooseBallstar from "@/assets/shoes/Golden Goose Ballstars/Screenshot 2026-06-08 232531.png";
+import imgGoldenGooseBallstar2 from "@/assets/shoes/Golden Goose Ballstars/Screenshot 2026-06-08 232625.png";
+import imgGoldenGooseBallstar3 from "@/assets/shoes/Golden Goose Ballstars/Screenshot 2026-06-08 232645.png";
+import imgGoldenGooseBallstar4 from "@/assets/shoes/Golden Goose Ballstars/Screenshot 2026-06-08 232658.png";
+import imgGoldenGooseBallstar5 from "@/assets/shoes/Golden Goose Ballstars/Screenshot 2026-06-08 232711.png";
+
 import imgGallerist from "@/assets/shoes/The Gallerist/Screenshot 2026-06-08 232956.png";
+
 import imgValentinoRoyco from "@/assets/shoes/Open Royco sneaker in nappa calfskin/Screenshot 2026-06-08 233234.png";
+import imgValentinoRoyco2 from "@/assets/shoes/Open Royco sneaker in nappa calfskin/Screenshot 2026-06-08 233244.png";
+import imgValentinoRoyco3 from "@/assets/shoes/Open Royco sneaker in nappa calfskin/Screenshot 2026-06-08 233255.png";
+import imgValentinoRoyco4 from "@/assets/shoes/Open Royco sneaker in nappa calfskin/Screenshot 2026-06-08 233303.png";
+import imgValentinoRoyco5 from "@/assets/shoes/Open Royco sneaker in nappa calfskin/Screenshot 2026-06-08 233314.png";
+import imgValentinoRoyco6 from "@/assets/shoes/Open Royco sneaker in nappa calfskin/Screenshot 2026-06-08 233329.png";
+
 import imgLoroPianaSummerWalk from "@/assets/shoes/Loro Piana Summer Walk/Screenshot 2026-06-08 233513.png";
+import imgLoroPianaSummerWalk2 from "@/assets/shoes/Loro Piana Summer Walk/Screenshot 2026-06-08 233527.png";
+import imgLoroPianaSummerWalk3 from "@/assets/shoes/Loro Piana Summer Walk/Screenshot 2026-06-08 233535.png";
+import imgLoroPianaSummerWalk4 from "@/assets/shoes/Loro Piana Summer Walk/Screenshot 2026-06-08 233546.png";
+import imgLoroPianaSummerWalk5 from "@/assets/shoes/Loro Piana Summer Walk/Screenshot 2026-06-08 233558.png";
+import imgLoroPianaSummerWalk6 from "@/assets/shoes/Loro Piana Summer Walk/Screenshot 2026-06-08 233609.png";
+import imgLoroPianaSummerWalk7 from "@/assets/shoes/Loro Piana Summer Walk/Screenshot 2026-06-08 233623.png";
 
 // Real product images - Tops
 import imgRalphPolo from "@/assets/tops/Ralph Lauren Polo Short Sleeved/Screenshot 2026-06-08 233853.png";
+import imgRalphPolo2 from "@/assets/tops/Ralph Lauren Polo Short Sleeved/Screenshot 2026-06-08 233905.png";
+import imgRalphPolo3 from "@/assets/tops/Ralph Lauren Polo Short Sleeved/Screenshot 2026-06-08 233921.png";
+
 import imgRalphQuarterzip from "@/assets/tops/Ralph Lauren Quarterzips (Not Knitted)/Screenshot 2026-06-08 234111.png";
+import imgRalphQuarterzip2 from "@/assets/tops/Ralph Lauren Quarterzips (Not Knitted)/Screenshot 2026-06-08 234127.png";
+import imgRalphQuarterzip3 from "@/assets/tops/Ralph Lauren Quarterzips (Not Knitted)/Screenshot 2026-06-08 234141.png";
+import imgRalphQuarterzip4 from "@/assets/tops/Ralph Lauren Quarterzips (Not Knitted)/Screenshot 2026-06-08 234152.png";
+
 import imgCucinelliLinen from "@/assets/tops/Linen Shirts by Brunello Cucinelli/Screenshot 2026-06-08 234318.png";
+import imgCucinelliLinen2 from "@/assets/tops/Linen Shirts by Brunello Cucinelli/Screenshot 2026-06-08 234336.png";
+import imgCucinelliLinen3 from "@/assets/tops/Linen Shirts by Brunello Cucinelli/Screenshot 2026-06-08 234350.png";
+import imgCucinelliLinen4 from "@/assets/tops/Linen Shirts by Brunello Cucinelli/Screenshot 2026-06-08 234404.png";
+
 import imgLoroPianaPolo from "@/assets/tops/Loro Piana Polo Shirts/Screenshot 2026-06-08 234531.png";
+import imgLoroPianaPolo2 from "@/assets/tops/Loro Piana Polo Shirts/Screenshot 2026-06-08 234544.png";
+import imgLoroPianaPolo3 from "@/assets/tops/Loro Piana Polo Shirts/Screenshot 2026-06-08 234559.png";
+import imgLoroPianaPolo4 from "@/assets/tops/Loro Piana Polo Shirts/Screenshot 2026-06-08 234609.png";
+import imgLoroPianaPolo5 from "@/assets/tops/Loro Piana Polo Shirts/Screenshot 2026-06-08 234623.png";
 
 // Real product images - Pants
 import imgCucinelliPants from "@/assets/pants/Linen Pants by Brunello Cucinelli/Screenshot 2026-06-08 234848.png";
+import imgCucinelliPants2 from "@/assets/pants/Linen Pants by Brunello Cucinelli/Screenshot 2026-06-08 234903.png";
+import imgCucinelliPants3 from "@/assets/pants/Linen Pants by Brunello Cucinelli/Screenshot 2026-06-08 234916.png";
+import imgCucinelliPants4 from "@/assets/pants/Linen Pants by Brunello Cucinelli/Screenshot 2026-06-08 234927.png";
+import imgCucinelliPants5 from "@/assets/pants/Linen Pants by Brunello Cucinelli/Screenshot 2026-06-08 234938.png";
+
 import imgRalphBedford from "@/assets/pants/Bedford Classic Fit Linen-Cotton Pant (By Ralph Lauren)/Screenshot 2026-06-08 235116.png";
+import imgRalphBedford2 from "@/assets/pants/Bedford Classic Fit Linen-Cotton Pant (By Ralph Lauren)/Screenshot 2026-06-08 235125.png";
+import imgRalphBedford3 from "@/assets/pants/Bedford Classic Fit Linen-Cotton Pant (By Ralph Lauren)/Screenshot 2026-06-08 235135.png";
+import imgRalphBedford4 from "@/assets/pants/Bedford Classic Fit Linen-Cotton Pant (By Ralph Lauren)/Screenshot 2026-06-08 235145.png";
+
 import imgAcneJeans from "@/assets/pants/Acne Studio Jeans/Screenshot 2026-06-08 235603.png";
+import imgAcneJeans2 from "@/assets/pants/Acne Studio Jeans/Screenshot 2026-06-08 235616.png";
+import imgAcneJeans3 from "@/assets/pants/Acne Studio Jeans/Screenshot 2026-06-08 235636.png";
+import imgAcneJeans4 from "@/assets/pants/Acne Studio Jeans/Screenshot 2026-06-08 235654.png";
+import imgAcneJeans5 from "@/assets/pants/Acne Studio Jeans/Screenshot 2026-06-08 235708.png";
 
 // Real product images - Watches
 import imgCartierSantos from "@/assets/Cartier Santos & Santos Dumont/Screenshot 2026-06-08 235902.png";
+import imgCartierSantos2 from "@/assets/Cartier Santos & Santos Dumont/Screenshot 2026-06-08 235917.png";
+import imgCartierSantos3 from "@/assets/Cartier Santos & Santos Dumont/Screenshot 2026-06-08 235924.png";
+import imgCartierSantos4 from "@/assets/Cartier Santos & Santos Dumont/Screenshot 2026-06-08 235934.png";
+import imgCartierSantos5 from "@/assets/Cartier Santos & Santos Dumont/Screenshot 2026-06-08 235947.png";
+import imgCartierSantos6 from "@/assets/Cartier Santos & Santos Dumont/Screenshot 2026-06-08 235958.png";
 
 // Use real product images for placeholders
 const imgRolexPlaceholder1 = imgCartierSantos;
@@ -144,13 +200,13 @@ export const seedProducts: SeedProduct[] = [
   // — Shoes —
   { id: "p-margiela-gats-white", name: "Margiela Replica GATs", category: "shoes", 
     image: imgMargielaGats,
-    images: [imgMargielaGats],
+    images: [imgMargielaGats, imgMargielaGats2, imgMargielaGats3, imgMargielaGats4, imgMargielaGats5],
     description: "Calfskin and suede low-top sneakers with signature heel tab. White/Grey colorway.",
     pricingNote: "Premium Italian craftsmanship. Sizes EU 40-46 available.",
     tiers: ["Single pair", "2-3 pairs", "4+ pairs"] },
   { id: "p-golden-goose-ballstar", name: "Golden Goose Ball Star", category: "shoes", 
     image: imgGoldenGooseBallstar,
-    images: [imgGoldenGooseBallstar],
+    images: [imgGoldenGooseBallstar, imgGoldenGooseBallstar2, imgGoldenGooseBallstar3, imgGoldenGooseBallstar4, imgGoldenGooseBallstar5],
     description: "Distressed leather sneakers with signature star detail and vintage treatment.",
     pricingNote: "Hand-finished in Italy. Each pair is unique.",
     tiers: ["Single pair", "2-3 pairs", "4+ pairs"] },
@@ -162,13 +218,13 @@ export const seedProducts: SeedProduct[] = [
     tiers: ["Single pair", "2+ pairs", "5+ pairs"] },
   { id: "p-valentino-open-royco", name: "Valentino Open Royco", category: "shoes", 
     image: imgValentinoRoyco,
-    images: [imgValentinoRoyco],
+    images: [imgValentinoRoyco, imgValentinoRoyco2, imgValentinoRoyco3, imgValentinoRoyco4, imgValentinoRoyco5, imgValentinoRoyco6],
     description: "Nappa calfskin sneakers with open-toe detail. Triple white or black.",
     pricingNote: "Italian luxury construction. Limited sizing.",
     tiers: ["Single pair", "2-3 pairs"] },
   { id: "p-loro-piana-summer-walk", name: "Loro Piana Summer Walk", category: "shoes", 
     image: imgLoroPianaSummerWalk,
-    images: [imgLoroPianaSummerWalk],
+    images: [imgLoroPianaSummerWalk, imgLoroPianaSummerWalk2, imgLoroPianaSummerWalk3, imgLoroPianaSummerWalk4, imgLoroPianaSummerWalk5, imgLoroPianaSummerWalk6, imgLoroPianaSummerWalk7],
     description: "Water-repellent suede loafer in sand, navy or olive. Lightweight summer sole.",
     pricingNote: "Resort-ready. Sizes 40-46 in select colors.",
     tiers: ["Single pair", "2+ pairs"] },
@@ -176,25 +232,25 @@ export const seedProducts: SeedProduct[] = [
   // — Tops —
   { id: "p-ralph-polo-ss", name: "Ralph Lauren Polo Shirt", category: "tops", 
     image: imgRalphPolo,
-    images: [imgRalphPolo],
+    images: [imgRalphPolo, imgRalphPolo2, imgRalphPolo3],
     description: "Cotton piqué short-sleeve polo. Available in white, navy, black, royal blue.",
     pricingNote: "Classic fit. Sizes S-XXL.",
     tiers: ["1-2 units", "3-5 units", "6+ units"] },
   { id: "p-ralph-quarterzip", name: "Ralph Lauren Quarter-Zip", category: "tops", 
     image: imgRalphQuarterzip,
-    images: [imgRalphQuarterzip],
+    images: [imgRalphQuarterzip, imgRalphQuarterzip2, imgRalphQuarterzip3, imgRalphQuarterzip4],
     description: "Double-knit cotton blend quarter-zip. Dark grey, hunter green, navy or black.",
     pricingNote: "Not knitted — structured layer. Sizes M-XXL.",
     tiers: ["1-2 units", "3-5 units", "6+ units"] },
   { id: "p-cucinelli-linen-shirt", name: "Brunello Cucinelli Linen Shirt", category: "tops", 
     image: imgCucinelliLinen,
-    images: [imgCucinelliLinen],
+    images: [imgCucinelliLinen, imgCucinelliLinen2, imgCucinelliLinen3, imgCucinelliLinen4],
     description: "100% high-quality linen shirt. White, ivory, sage green or sky blue.",
     pricingNote: "Italian linen. Relaxed fit, sizes 48-56.",
     tiers: ["1-2 units", "3+ units"] },
   { id: "p-loro-piana-polo", name: "Loro Piana Polo Shirt", category: "tops", 
     image: imgLoroPianaPolo,
-    images: [imgLoroPianaPolo],
+    images: [imgLoroPianaPolo, imgLoroPianaPolo2, imgLoroPianaPolo3, imgLoroPianaPolo4, imgLoroPianaPolo5],
     description: "Silk and cotton blend polo. Beige, burgundy, navy or cloud grey.",
     pricingNote: "Luxury fabrication. Sizes 48-54.",
     tiers: ["1-2 units", "3+ units"] },
@@ -202,19 +258,19 @@ export const seedProducts: SeedProduct[] = [
   // — Pants —
   { id: "p-cucinelli-linen-pants", name: "Brunello Cucinelli Linen Pants", category: "pants", 
     image: imgCucinelliPants,
-    images: [imgCucinelliPants],
+    images: [imgCucinelliPants, imgCucinelliPants2, imgCucinelliPants3, imgCucinelliPants4, imgCucinelliPants5],
     description: "100% Italian linen trousers. White, sand, light grey or navy.",
     pricingNote: "Tapered fit. Sizes 48-56.",
     tiers: ["1-2 units", "3+ units"] },
   { id: "p-ralph-bedford-linen", name: "Ralph Lauren Bedford Linen-Cotton", category: "pants", 
     image: imgRalphBedford,
-    images: [imgRalphBedford],
+    images: [imgRalphBedford, imgRalphBedford2, imgRalphBedford3, imgRalphBedford4],
     description: "Linen and cotton blend trouser. Khaki, white, navy or olive.",
     pricingNote: "Classic fit. Sizes 30-38 waist.",
     tiers: ["1-2 units", "3-5 units", "6+ units"] },
   { id: "p-acne-jeans", name: "Acne Studios Denim", category: "pants", 
     image: imgAcneJeans,
-    images: [imgAcneJeans],
+    images: [imgAcneJeans, imgAcneJeans2, imgAcneJeans3, imgAcneJeans4, imgAcneJeans5],
     description: "Rigid Japanese denim. Light blue vintage wash, stay black or mid blue.",
     pricingNote: "Modern slim fit. Sizes 29-36 waist.",
     tiers: ["1-2 units", "3+ units"] },
@@ -260,7 +316,7 @@ export const seedProducts: SeedProduct[] = [
   // — Watches —
   { id: "p-cartier-santos", name: "Cartier Santos", category: "watches", 
     image: imgCartierSantos,
-    images: [imgCartierSantos],
+    images: [imgCartierSantos, imgCartierSantos2, imgCartierSantos3, imgCartierSantos4, imgCartierSantos5, imgCartierSantos6],
     description: "Steel, two-tone or solid gold Santos watch. Automatic movement.",
     pricingNote: "Swiss made. Full manufacturer warranty.",
     tiers: ["Single item"] },
