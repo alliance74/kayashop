@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npm run build && npm run vercel:post",
+  "buildCommand": "npm install && npm run build && npm run vercel:post",
   "outputDirectory": ".vercel/output",
-  "framework": null,
-  "installCommand": "npm install"
+  "framework": null
 }
