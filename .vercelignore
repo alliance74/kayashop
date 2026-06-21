@@ -1,0 +1,8 @@
+bun.lock
+bunfig.toml
+.git
+node_modules
+.DS_Store
+*.log
+.env.local
+.env.*.local
