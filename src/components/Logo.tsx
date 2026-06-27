@@ -10,9 +10,6 @@ export function Logo({ className = "" }: { className?: string }) {
       />
       <div className="flex flex-col">
         <span className="font-display text-2xl tracking-tight">Aperion</span>
-        <span className="-mt-1 text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-          Curated Fashion
-        </span>
       </div>
     </Link>
   );

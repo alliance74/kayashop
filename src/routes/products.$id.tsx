@@ -68,7 +68,7 @@ function ProductDetail() {
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="overflow-hidden rounded-[28px] border border-line bg-peach-soft/40 shadow-card">
           {product.image ? (
-            <img src={product.image} alt={product.name} className="aspect-[4/5] w-full object-cover" />
+            <img src={product.image} alt={product.name} className="aspect-[4/5] w-full object-contain" />
           ) : (
             <div className="flex aspect-[4/5] w-full items-center justify-center font-display text-8xl text-terracotta/40">
               ◆
