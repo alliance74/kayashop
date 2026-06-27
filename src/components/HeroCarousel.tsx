@@ -92,23 +92,19 @@ export function HeroCarousel() {
                 fetchPriority={idx === 0 ? "high" : "auto"}
               />
               */}
-              {/* Video background - Download your video from Pinterest and save it as hero-video.mp4 in the public folder! */}
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 h-full w-full object-cover"
-                poster={s.image}
-              >
-                <source src="/hero-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              {/* Instructions: 1. Download your video from Pinterest 2. Save it as "hero-video.mp4" in your project's "public" folder 3. Refresh the page! */}
+              {/* Pinterest embed as background */}
+              <div className="absolute inset-0 overflow-hidden">
+                <iframe
+                  src="https://assets.pinterest.com/ext/embed.html?id=582582901831559332"
+                  className="absolute top-1/2 left-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2"
+                  frameBorder="0"
+                  scrolling="no"
+                />
+              </div>
               {/* base dark scrim so bright images don't blow out */}
-              {/* <div className="absolute inset-0 bg-foreground/30" /> */}
+              <div className="absolute inset-0 bg-foreground/30" />
               {/* directional gradient for text legibility on the left/bottom */}
-              {/* <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/55 to-background/70" /> */}
+              <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/55 to-background/70" />
               <div className="relative grid h-full gap-10 px-6 py-10 md:grid-cols-12 md:px-10 md:py-14 xl:px-16">
                 <div className="flex flex-col justify-between md:col-span-7">
                   <div className="inline-flex w-fit items-center gap-2 rounded-full border border-line bg-background/80 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-ink backdrop-blur-sm">
