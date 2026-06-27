@@ -84,23 +84,24 @@ export function HeroCarousel() {
               className={"absolute inset-0 transition-opacity duration-1000 " + (idx === i ? "opacity-100" : "opacity-0 pointer-events-none")}
               aria-hidden={idx !== i}
             >
-              {/* Existing image commented out
-              <img
-                src={s.image}
-                alt={s.eyebrow}
+              {/* Local video background */}
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="absolute inset-0 h-full w-full object-cover"
-                fetchPriority={idx === 0 ? "high" : "auto"}
-              />
-              */}
-              {/* Pinterest embed as background */}
-              <div className="absolute inset-0 overflow-hidden">
-                <iframe
-                  src="https://assets.pinterest.com/ext/embed.html?id=582582901831559332"
-                  className="absolute top-1/2 left-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2"
-                  frameBorder="0"
-                  scrolling="no"
+                poster={s.image}
+              >
+                <source src="/hero-video.mp4" type="video/mp4" />
+                {/* Fallback to original image if video fails */}
+                <img
+                  src={s.image}
+                  alt={s.eyebrow}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  fetchPriority={idx === 0 ? "high" : "auto"}
                 />
-              </div>
+              </video>
               {/* base dark scrim so bright images don't blow out */}
               <div className="absolute inset-0 bg-foreground/30" />
               {/* directional gradient for text legibility on the left/bottom */}
