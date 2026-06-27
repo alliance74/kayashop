@@ -84,12 +84,24 @@ export function HeroCarousel() {
               className={"absolute inset-0 transition-opacity duration-1000 " + (idx === i ? "opacity-100" : "opacity-0 pointer-events-none")}
               aria-hidden={idx !== i}
             >
+              {/* Existing image commented out
               <img
                 src={s.image}
                 alt={s.eyebrow}
                 className="absolute inset-0 h-full w-full object-cover"
                 fetchPriority={idx === 0 ? "high" : "auto"}
               />
+              */}
+              {/* Video background */}
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+                src="https://assets.mixkit.co/videos/preview/mixkit-woman-walking-in-a-clothing-store-2243-large.mp4"
+              />
+              {/* Note: You'll need to replace the video src with your actual video URL from Pinterest */}
               {/* base dark scrim so bright images don't blow out */}
               {/* <div className="absolute inset-0 bg-foreground/30" /> */}
               {/* directional gradient for text legibility on the left/bottom */}
