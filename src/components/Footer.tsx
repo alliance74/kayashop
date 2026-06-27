@@ -56,7 +56,7 @@ export function Footer() {
             New collections, style inspiration and seasonal lookbooks — no spam.
           </p>
           <form className="mt-4 flex gap-2">
-            <input type="email" required placeholder="you@email.com" className="field flex-1" />
+            <input type="email" required placeholder="you@email.com" className="field flex-1 px-4 py-3" />
             <button className="btn-primary text-sm">Subscribe</button>
           </form>
         </div>
