@@ -92,7 +92,7 @@ export function HeroCarousel() {
                 playsInline
                 className="absolute inset-0 h-full w-full object-cover"
                 poster={s.image}
-                crossorigin="anonymous"
+                crossOrigin="anonymous"
               >
                 <source src="https://wearoldmoney.com/cdn/shop/videos/c/vp/0d17d882648d40cc8176ef273a9fa298/0d17d882648d40cc8176ef273a9fa298.HD-1080p-7.2Mbps-46204024.mp4?v=0" type="video/mp4" />
                 {/* Fallback to original image if video fails */}
