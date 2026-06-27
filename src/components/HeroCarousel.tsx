@@ -109,7 +109,7 @@ export function HeroCarousel() {
               <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/55 to-background/70" />
               <div className="relative grid h-full gap-10 px-6 py-10 md:grid-cols-12 md:px-10 md:py-14 xl:px-16">
                 <div className="flex flex-col justify-between md:col-span-7">
-                  <div className="inline-flex w-fit items-center gap-2 rounded-full border border-line bg-background/80 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-ink backdrop-blur-sm">
+                  <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/30 bg-black/60 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-white backdrop-blur-sm">
                     <span className="h-1.5 w-1.5 rounded-full bg-terracotta" />
                     {s.eyebrow}
                   </div>
@@ -120,18 +120,18 @@ export function HeroCarousel() {
                     </h1>
                     <p className="mt-6 max-w-xl rounded-xl bg-black/50 px-4 py-3 text-base text-white backdrop-blur-sm md:text-lg">{s.body}</p>
                     <div className="mt-8 flex flex-wrap gap-3">
-                      <Link to={s.ctaTo} className="btn-primary inline-flex items-center gap-2">
-                        {s.ctaLabel} <ArrowUpRight className="h-4 w-4" />
+                      <Link to={s.ctaTo} className="btn-primary inline-flex items-center gap-2 text-white">
+                        {s.ctaLabel} <ArrowUpRight className="h-4 w-4 text-white" />
                       </Link>
-                      <Link to="/quote" className="btn-ghost">Request a quote</Link>
+                      <Link to="/quote" className="btn-ghost text-white border-white/30 hover:bg-white/20">Request a quote</Link>
                     </div>
                   </div>
                 </div>
                 <div className="hidden flex-col justify-end md:col-span-5 md:flex">
-                  <div className="surface-card p-5">
-                    <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Featured set · {String(idx + 1).padStart(2, "0")} of {String(slides.length).padStart(2, "0")}</div>
-                    <div className="mt-2 font-display text-2xl">{s.eyebrow}</div>
-                    <p className="mt-1 text-sm text-muted-foreground">{s.body.slice(0, 100)}…</p>
+                  <div className="surface-card bg-black/60 border-white/30 p-5 backdrop-blur-sm">
+                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/80">Featured set · {String(idx + 1).padStart(2, "0")} of {String(slides.length).padStart(2, "0")}</div>
+                    <div className="mt-2 font-display text-2xl text-white">{s.eyebrow}</div>
+                    <p className="mt-1 text-sm text-white/80">{s.body.slice(0, 100)}…</p>
                   </div>
                 </div>
               </div>
@@ -144,14 +144,14 @@ export function HeroCarousel() {
           <button
             onClick={() => go(i - 1)}
             aria-label="Previous slide"
-            className="grid h-12 w-12 place-items-center rounded-full border border-line bg-background/85 backdrop-blur transition-colors hover:bg-foreground hover:text-background"
+            className="grid h-12 w-12 place-items-center rounded-full border border-white/30 bg-black/60 text-white backdrop-blur transition-colors hover:bg-white/20 hover:text-white"
           >
             <ArrowLeft className="h-4 w-4" />
           </button>
           <button
             onClick={() => go(i + 1)}
             aria-label="Next slide"
-            className="grid h-12 w-12 place-items-center rounded-full border border-line bg-background/85 backdrop-blur transition-colors hover:bg-foreground hover:text-background"
+            className="grid h-12 w-12 place-items-center rounded-full border border-white/30 bg-black/60 text-white backdrop-blur transition-colors hover:bg-white/20 hover:text-white"
           >
             <ArrowRight className="h-4 w-4" />
           </button>
