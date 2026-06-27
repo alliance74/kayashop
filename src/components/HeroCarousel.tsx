@@ -92,16 +92,19 @@ export function HeroCarousel() {
                 fetchPriority={idx === 0 ? "high" : "auto"}
               />
               */}
-              {/* Video background */}
+              {/* Video background - Download your video from Pinterest and save it as hero-video.mp4 in the public folder! */}
               <video
                 autoPlay
                 muted
                 loop
                 playsInline
                 className="absolute inset-0 h-full w-full object-cover"
-                src="https://assets.mixkit.co/videos/preview/mixkit-woman-walking-in-a-clothing-store-2243-large.mp4"
-              />
-              {/* Note: You'll need to replace the video src with your actual video URL from Pinterest */}
+                poster={s.image}
+              >
+                <source src="/hero-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              {/* Instructions: 1. Download your video from Pinterest 2. Save it as "hero-video.mp4" in your project's "public" folder 3. Refresh the page! */}
               {/* base dark scrim so bright images don't blow out */}
               {/* <div className="absolute inset-0 bg-foreground/30" /> */}
               {/* directional gradient for text legibility on the left/bottom */}
