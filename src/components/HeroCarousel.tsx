@@ -58,32 +58,35 @@ const slides: Slide[] = [
 ];
 
 export function HeroCarousel() {
-  const [i, setI] = useState(0);
-  const [auto, setAuto] = useState(true);
+  // const [i, setI] = useState(0);
+  // const [auto, setAuto] = useState(true);
 
-  useEffect(() => {
-    if (!auto) return;
-    const t = setInterval(() => setI((v) => (v + 1) % slides.length), 6500);
-    return () => clearInterval(t);
-  }, [auto]);
+  // useEffect(() => {
+  //   if (!auto) return;
+  //   const t = setInterval(() => setI((v) => (v + 1) % slides.length), 6500);
+  //   return () => clearInterval(t);
+  // }, [auto]);
 
-  const go = (n: number) => { setI((n + slides.length) % slides.length); setAuto(false); };
+  // const go = (n: number) => { setI((n + slides.length) % slides.length); setAuto(false); };
+
+  const s = slides[0]; // Only use the first slide
 
   return (
     <section className="w-full pt-0 pb-0">
       <div
         className="relative overflow-hidden border-b border-line/60 shadow-warm"
-        onMouseEnter={() => setAuto(false)}
-        onMouseLeave={() => setAuto(true)}
+        // onMouseEnter={() => setAuto(false)}
+        // onMouseLeave={() => setAuto(true)}
       >
         {/* slide stack */}
         <div className="relative h-[70vh] min-h-[560px] md:h-[80vh] md:min-h-[640px]">
-          {slides.map((s, idx) => (
+          {/* {slides.map((s, idx) => (
             <div
               key={idx}
               className={"absolute inset-0 transition-opacity duration-1000 " + (idx === i ? "opacity-100" : "opacity-0 pointer-events-none")}
               aria-hidden={idx !== i}
-            >
+            > */}
+          <div className="absolute inset-0">
               {/* Local video background */}
               <video
                 autoPlay
@@ -100,7 +103,7 @@ export function HeroCarousel() {
                   src={s.image}
                   alt={s.eyebrow}
                   className="absolute inset-0 h-full w-full object-cover"
-                  fetchPriority={idx === 0 ? "high" : "auto"}
+                // fetchPriority={idx === 0 ? "high" : "auto"}
                 />
               </video>
               {/* base dark scrim so bright images don't blow out */}
@@ -129,18 +132,18 @@ export function HeroCarousel() {
                 </div>
                 <div className="hidden flex-col justify-end md:col-span-5 md:flex">
                   <div className="surface-card bg-black/60 border-white/30 p-5 backdrop-blur-sm">
-                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/80">Featured set · {String(idx + 1).padStart(2, "0")} of {String(slides.length).padStart(2, "0")}</div>
+                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/80">Featured set · 01 of {String(slides.length).padStart(2, "0")}</div>
                     <div className="mt-2 font-display text-2xl text-white">{s.eyebrow}</div>
                     <p className="mt-1 text-sm text-white/80">{s.body.slice(0, 100)}…</p>
                   </div>
                 </div>
               </div>
             </div>
-          ))}
+          {/* ))} */}
         </div>
 
         {/* controls */}
-        <div className="absolute bottom-6 right-6 z-10 flex items-center gap-2 md:bottom-8 md:right-8">
+        {/* <div className="absolute bottom-6 right-6 z-10 flex items-center gap-2 md:bottom-8 md:right-8">
           <button
             onClick={() => go(i - 1)}
             aria-label="Previous slide"
@@ -155,10 +158,10 @@ export function HeroCarousel() {
           >
             <ArrowRight className="h-4 w-4" />
           </button>
-        </div>
+        </div> */}
 
         {/* progress */}
-        <div className="absolute bottom-8 left-7 z-10 flex items-center gap-1.5 md:left-14">
+        {/* <div className="absolute bottom-8 left-7 z-10 flex items-center gap-1.5 md:left-14">
           {slides.map((_, idx) => (
             <button
               key={idx}
@@ -167,7 +170,7 @@ export function HeroCarousel() {
               className={"h-1.5 rounded-full transition-all " + (idx === i ? "w-10 bg-terracotta" : "w-5 bg-foreground/25 hover:bg-foreground/45")}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
