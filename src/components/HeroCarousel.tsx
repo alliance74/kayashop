@@ -94,7 +94,7 @@ export function HeroCarousel() {
                 poster={s.image}
                 crossOrigin="anonymous"
               >
-                <source src="https://davidalanclothing.com/cdn/shop/videos/c/vp/baa39fc1aa8b4b37b8ebd2bb93ec2f30/baa39fc1aa8b4b37b8ebd2bb93ec2f30.HD-1080p-7.2Mbps-37584876.mp4?v=0" type="video/mp4" />
+                <source src="/hero-video.mp4" type="video/mp4" />
                 {/* Fallback to original image if video fails */}
                 <img
                   src={s.image}
